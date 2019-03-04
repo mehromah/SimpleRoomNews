@@ -21,19 +21,13 @@ public class MainActivity extends AppCompatActivity {
     public MainViewModel viewModel;
     public NewsAdapter newsAdapter;
     public RecyclerView newsRecyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-          newsRecyclerView = findViewById(R.id.rv_home_newsList);
-
         viewModel = new MainViewModel(this);
-       //newsAdapter = new NewsAdapter(news);
-        setupViews();
-    }
-
-
-    private void setupViews() {
+        newsRecyclerView = findViewById(R.id.rv_home_newsList);
         newsRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         newsRecyclerView.setAdapter(newsAdapter);
         Flowable<List<News>> t = viewModel.getNewsList()
@@ -44,9 +38,14 @@ public class MainActivity extends AppCompatActivity {
                     public void accept(List<News> news) throws Exception {
                         newsAdapter.setNewsList(news);
 
+
                     }
                 });
 
         newsRecyclerView.setNestedScrollingEnabled(false);
     }
+
+
+
+
 }
