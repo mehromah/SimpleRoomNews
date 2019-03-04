@@ -47,7 +47,7 @@ public class NewsRepository implements NewsDataSource {
 
                     }
                 });
-        Flowable<List<News>> tt=localDataSource.getNews();
+        localDataSource.getNews();
         return localDataSource.getNews();
     }
 
