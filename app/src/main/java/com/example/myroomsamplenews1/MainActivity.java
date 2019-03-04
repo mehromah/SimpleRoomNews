@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     public NewsAdapter newsAdapter;
     public RecyclerView newsRecyclerView;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
-    public Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
