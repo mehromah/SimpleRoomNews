@@ -7,6 +7,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 
+
 @Entity(tableName = "tbl_news")
 public class News implements Parcelable {
     @PrimaryKey

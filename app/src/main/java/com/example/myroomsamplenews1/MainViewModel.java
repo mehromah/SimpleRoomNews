@@ -12,19 +12,12 @@ import io.reactivex.Flowable;
 
 public class MainViewModel  {
     private NewsRepository newsRepository;
-    private Flowable<List<News>> newsList;
 
     public MainViewModel(Context context) {
-
         newsRepository = new NewsRepository(context);
-        newsList = newsRepository.getNews();
     }
 
     Flowable<List<News>> getNewsList() {
-        return newsList;
+        return newsRepository.getNews();
     }
-
-
-
-
 }
