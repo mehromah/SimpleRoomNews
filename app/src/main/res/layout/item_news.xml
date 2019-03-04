@@ -37,13 +37,15 @@
         android:layout_alignTop="@id/frame_news_imageContainer"
         android:layout_toEndOf="@id/frame_news_imageContainer"
         android:maxLines="3"
-        android:minLines="3" />
+        android:minLines="3"
+        android:layout_toRightOf="@id/frame_news_imageContainer" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_news_title"
-        android:layout_toEndOf="@id/frame_news_imageContainer">
+        android:layout_toEndOf="@id/frame_news_imageContainer"
+        android:layout_toRightOf="@id/frame_news_imageContainer">
 
         <ImageView
             android:id="@+id/iv_news_dateIcon"
@@ -51,7 +53,8 @@
             android:layout_height="18dp"
             android:layout_marginEnd="8dp"
             android:layout_centerVertical="true"
-            app:srcCompat="@drawable/calendar_clock" />
+            app:srcCompat="@drawable/calendar_clock"
+            android:layout_marginRight="8dp" />
 
         <TextView
             android:id="@+id/tv_news_date"
@@ -60,7 +63,8 @@
             android:textSize="12sp"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/iv_news_dateIcon"
-            android:textColor="@color/gray400" />
+            android:textColor="@color/gray400"
+            android:layout_toRightOf="@id/iv_news_dateIcon" />
     </RelativeLayout>
 
 </RelativeLayout>
